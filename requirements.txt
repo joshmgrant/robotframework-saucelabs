@@ -1,0 +1,6 @@
+selenium
+saucebindings
+robotframework
+robotframework-seleniumlibrary
+robotframework-appiumlibrary
+certifi
