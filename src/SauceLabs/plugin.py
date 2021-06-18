@@ -33,6 +33,10 @@ class SauceLabs(LibraryComponent):
         assert self.session.options.browser_name == "chrome"
 
     @keyword
+    def browser_should_be_firefox(self):
+        assert self.session.options.browser_name == "firefox"
+
+    @keyword
     def platform_version_should_be_windows_10(self):
         assert self.session.options.platform_name == "Windows 10"
 
@@ -59,4 +63,45 @@ class SauceLabs(LibraryComponent):
             self.session.stop(True)
         self.ctx.close_all_browsers()
 
+    @keyword
+    def start_latest_chrome(self,
+        url: Optional[str] = None,
+        alias: Optional[str] = None,
+        version: Optional[str] = None,
+        platform_version: Optional[str] = None):
+        index = self.drivers.get_index(alias)
+        if index:
+            self.info(f"Using existing browser from index {index}.")
+            self.switch_browser(alias)
+            if url:
+                self.go_to(url)
+            return index
+        options = SauceOptions('chrome')
+        self.session = SauceSession(options)
+        driver = self.session.start()
+        index = self.ctx.register_driver(driver, alias)
+        if url:
+            driver.get(url)
+        return index
+
+    @keyword
+    def start_latest_firefox(self,
+        url: Optional[str] = None,
+        alias: Optional[str] = None,
+        version: Optional[str] = None,
+        platform_version: Optional[str] = None):
+        index = self.drivers.get_index(alias)
+        if index:
+            self.info(f"Using existing browser from index {index}.")
+            self.switch_browser(alias)
+            if url:
+                self.go_to(url)
+            return index
+        options = SauceOptions('firefox')
+        self.session = SauceSession(options)
+        driver = self.session.start()
+        index = self.ctx.register_driver(driver, alias)
+        if url:
+            driver.get(url)
+        return index
 

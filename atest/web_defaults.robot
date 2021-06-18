@@ -17,3 +17,8 @@ Verify Default Platform Version
     Start Sauce Browser
     Platform Version Should Be Windows 10
     [Teardown]  Stop Sauce Session
+
+Verify Firefox Session
+    Start Latest Firefox
+    Browser Should Be Firefox
+    [Teardown]  Stop Sauce Session
