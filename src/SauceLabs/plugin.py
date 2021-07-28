@@ -1,9 +1,13 @@
 from typing import Optional
+import os
 from SeleniumLibrary.base import LibraryComponent, keyword
 from SeleniumLibrary.keywords.element import ElementKeywords
 from SeleniumLibrary import SeleniumLibrary
 from saucebindings.options import SauceOptions
 from saucebindings.session import SauceSession
+from selenium import webdriver
+from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.remote.remote_connection import RemoteConnection
 
 from robot.utils import is_truthy
 
@@ -61,7 +65,7 @@ class SauceLabs(LibraryComponent):
     def stop_sauce_session(self):
         if self.session:
             self.session.stop(True)
-        self.ctx.close_all_browsers()
+        self.ctx.close_browser()
 
     @keyword
     def start_latest_chrome(self,
@@ -104,4 +108,3 @@ class SauceLabs(LibraryComponent):
         if url:
             driver.get(url)
         return index
-
