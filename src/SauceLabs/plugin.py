@@ -82,9 +82,9 @@ class SauceLabs(LibraryComponent):
         return index
     
     @keyword
-    def stop_sauce_session(self):
+    def stop_sauce_session(self, passed: bool):
         if self.session:
-            self.session.stop(True)
+            self.session.stop(passed)
         self.ctx.close_browser()
 
     @keyword

@@ -16,7 +16,7 @@ Note that you must have the SeleniumLibrary installed as well.
 
 ## Examples
 
-See [the acceptance test](./atest/acceptance.robot) for an example of usage.
+See [the acceptance test](./atest/acceptance.robot) for an example of usage, and the other tests for more examples. 
 
 ## Contribution
 
