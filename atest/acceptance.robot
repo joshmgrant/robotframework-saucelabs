@@ -1,5 +1,5 @@
 *** Settings ***
-Library  SeleniumLibrary  plugins=${CURDIR}/../src/SauceLabs
+Library  SeleniumLibrary  plugins=${CURDIR}/../robotframework-saucelabs/SauceLabs
 
 *** Test Cases ***
 
