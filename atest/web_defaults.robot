@@ -19,6 +19,16 @@ Verify Default Platform Version
     [Teardown]  Stop Sauce Session
 
 Verify Firefox Session
-    Start Latest Firefox
+    Start Latest Firefox On Sauce
     Browser Should Be Firefox
+    [Teardown]  Stop Sauce Session
+
+Verify Selecting Browser Using Params
+    Start Sauce Browser  browserName=chrome  browserVersion=90.0  platformName=Windows 10
+    Browser Should Be Chrome
+    [Teardown]  Stop Sauce Session
+
+Verify Selecting Safari Using Params
+    Start Sauce Browser  browserName=safari  browserVersion=13.1  platformName=MacOS 10.15
+    Browser Should Be Safari
     [Teardown]  Stop Sauce Session
