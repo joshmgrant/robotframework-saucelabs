@@ -4,6 +4,15 @@ version = "0.1.0"
 description = "A plugin for SeleniumLibrary to help with Sauce Labs usage."
 authors = ["joshgrant <joshua.m.grant@gmail.com>"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/joshmgrant/robotframework-saucelabs/blob/main/README.md"
+repository = "https://github.com/joshmgrant/robotframework-saucelabs"
+keywords = ["robotframework", "selenium", "saucelabs"]
+classifiers = [
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"

@@ -2,7 +2,7 @@
 
 This is a plugin for the SeleniumLibrary to help with using Sauce Labs. 
 
-This library is a [plugin extension]() of the SeleniumLibrary. That means you can (in theory!) use all the keywords in the SeleniumLibrary _in addition to_ the keywords added here. The keywords added are specifically meant for use with Sauce Labs.
+This library is a [plugin extension](https://github.com/robotframework/SeleniumLibrary/blob/master/docs/extending/extending.rst) of the SeleniumLibrary. That means you can (in theory!) use all the keywords in the SeleniumLibrary _in addition to_ the keywords added here. The keywords added are specifically meant for use with Sauce Labs.
 
 ## Installation
 
