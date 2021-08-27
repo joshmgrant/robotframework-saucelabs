@@ -185,8 +185,20 @@ robotframework-pythonlibcore = ">=2.1.0"
 selenium = ">=3.141.0"
 
 [[package]]
+name = "sa11y"
+version = "0.2.3"
+description = "The Selenium Accessibility Project"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[package.dependencies]
+pytest = "*"
+selenium = "*"
+
+[[package]]
 name = "saucebindings"
-version = "1.0.0"
+version = "1.2.0"
 description = "Sauce Labs Python bindings library"
 category = "main"
 optional = false
@@ -239,7 +251,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d34a25a09e2f4569a4687c95c2ee150144588f9984a901636b839dcc97bdd0fa"
+content-hash = "5d661174924120b4317c2088e248713e01d83e0e1ab1ccaf14ef9c723f011c58"
 
 [metadata.files]
 appium-python-client = [
@@ -311,8 +323,11 @@ robotframework-seleniumlibrary = [
     {file = "robotframework-seleniumlibrary-5.1.3.tar.gz", hash = "sha256:f51a0068c6c0d8107ee1120874a3afbf2bbe751fd0782cb86a27a616d9ca30b6"},
     {file = "robotframework_seleniumlibrary-5.1.3-py2.py3-none-any.whl", hash = "sha256:7c8211b870249db53dbb2091a5a36c09aa657f06405d112587d37d33fff7454e"},
 ]
+sa11y = [
+    {file = "sa11y-0.2.3-py3-none-any.whl", hash = "sha256:7ffa3b41b57f1d69955bb14384e6f145853e2df3250b29818e8797e71925af69"},
+]
 saucebindings = [
-    {file = "saucebindings-1.0.0.tar.gz", hash = "sha256:15e122b2e1ae63e39157ae25a940c85d4ab90c9fe7d23a1e20c5f8506e01504f"},
+    {file = "saucebindings-1.2.0.tar.gz", hash = "sha256:9fac46ce9eeda931b34457c9a0c8dd85f99fda3e32574115bf78ace56efd6516"},
 ]
 selenium = [
     {file = "selenium-3.141.0-py2.py3-none-any.whl", hash = "sha256:2d7131d7bc5a5b99a2d9b04aaf2612c411b03b8ca1b1ee8d3de5845a9be2cb3c"},

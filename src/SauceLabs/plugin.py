@@ -3,6 +3,7 @@ import os
 from SeleniumLibrary.base import LibraryComponent, keyword
 from SeleniumLibrary.keywords.element import ElementKeywords
 from SeleniumLibrary import SeleniumLibrary
+from robot.output.console.verbose import KeywordMarker
 from saucebindings.options import SauceOptions
 from saucebindings.session import SauceSession
 from selenium import webdriver
@@ -58,7 +59,8 @@ class SauceLabs(LibraryComponent):
         alias: Optional[str] = None,
         browserName: Optional[str] = 'chrome',
         browserVersion: Optional[str] = None,
-        platformName: Optional[str] = None):
+        platformName: Optional[str] = None,
+        **kwargs):
         """Start a browser on Sauce. Defaults to starting the latest Chrome on Windows 10"""
         index = self.drivers.get_index(alias)
         if index:
@@ -68,10 +70,11 @@ class SauceLabs(LibraryComponent):
                 self.go_to(url)
             return index
         if not any([browserVersion, platformName]):
-            self.session = SauceSession(data_center=self.sauce_data_centre)
+            self.options = SauceOptions(**kwargs)
         else:
-            self.options = SauceOptions(browserName=browserName, browserVersion=browserVersion, platformName=platformName)
-            self.session = SauceSession(self.options, data_center=self.sauce_data_centre)
+            self.options = SauceOptions(browserName=browserName, browserVersion=browserVersion, platformName=platformName, **kwargs)
+        
+        self.session = SauceSession(self.options, data_center=self.sauce_data_centre)
         driver = self.session.start()
         index = self.ctx.register_driver(driver, alias)
         if url:

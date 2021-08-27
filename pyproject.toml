@@ -8,11 +8,12 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.8"
 selenium = "^3.141.0"
-saucebindings = "1.0.0"
+saucebindings = "^1.2.0"
 robotframework = "^4.0.1"
 robotframework-seleniumlibrary = "^5.1.3"
 robotframework-appiumlibrary = "^1.6.1"
 certifi = "^2021.5.30"
+sa11y = "0.2.3"
 
 [tool.poetry.dev-dependencies]
 
