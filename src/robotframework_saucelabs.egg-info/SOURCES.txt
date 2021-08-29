@@ -5,4 +5,5 @@ src/SauceLabs/plugin.py
 src/robotframework_saucelabs.egg-info/PKG-INFO
 src/robotframework_saucelabs.egg-info/SOURCES.txt
 src/robotframework_saucelabs.egg-info/dependency_links.txt
+src/robotframework_saucelabs.egg-info/requires.txt
 src/robotframework_saucelabs.egg-info/top_level.txt

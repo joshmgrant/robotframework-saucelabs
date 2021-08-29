@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: robotframework-saucelabs
-Version: 0.2.1
+Version: 0.2.2
 Summary:  A Library for Working with Sauce Labs 
 Home-page: https://github.com/joshgrant/robotframework-saucelabs
 Author: Josh Grant

@@ -12,6 +12,12 @@ You can install this package using `pip`:
 pip install robotframework-saucelabs
 ```
 
+Currently, there are two other dependencies you need to install for this package as well:
+
+```bash
+pip install saucebindings sa11y
+```
+
 This library is powered by the Python [Sauce Bindings](https://opensource.saucelabs.com/sauce_bindings/) to connect and use Sauce Labs. 
 
 A requirement of using this library is to [set environment variables](https://opensource.saucelabs.com/sauce_bindings/getting-started#universal-prerequisites) for your Sauce username and access key.
