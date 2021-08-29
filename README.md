@@ -12,9 +12,40 @@ You can install this package using `pip`:
 pip install robotframework-saucelabs
 ```
 
-Note that you must have the SeleniumLibrary installed as well. 
+This library is powered by the Python [Sauce Bindings](https://opensource.saucelabs.com/sauce_bindings/) to connect and use Sauce Labs. 
+
+A requirement of using this library is to [set environment variables](https://opensource.saucelabs.com/sauce_bindings/getting-started#universal-prerequisites) for your Sauce username and access key.
+
+Note that you must have the [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) installed as well. 
 
 ## Examples
+
+Since this library is a plugin for the SeleniumLibrary, you need to add this as a plugin where you define using the SeleniumLibrary:
+
+```robot
+
+*** Settings ***
+Library  SeleniumLibrary  plugins=SauceLabs
+
+```
+
+After defining this plugin, you can then use SauceLabs keywords in addition to SeleniumLibrary keywords:
+
+```robot
+*** Test Cases ***
+
+Web Workflow Test
+    # Use a SauceLabs keyword
+    Start Latest Chrome On Sauce  https://www.saucedemo.com
+    # Then you can use standard SeleniumLibrary keywords
+    Input text  id:user-name  standard_user
+    Input text  id:password  secret_sauce
+    Click button  class:btn_action
+    Page should contain element  id:shopping_cart_container
+    # End with closing the session on Sauce
+    [Teardown]  Stop Sauce Session  ${TEST_STATUS}
+
+```
 
 See [the acceptance test](https://github.com/joshmgrant/robotframework-saucelabs/blob/main/atest/acceptance.robot) for an example of usage, and the other tests for more examples. 
 
