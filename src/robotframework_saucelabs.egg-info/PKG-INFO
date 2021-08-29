@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: robotframework-saucelabs
+Version: 0.1.0
+Summary:  A Library for Working with Sauce Labs 
+Home-page: https://github.com/joshgrant/robotframework-saucelabs
+Author: Josh Grant
+Author-email: joshua.m.grant@gmail.com
+License: MIT
+Description: # Robotframework - Sauce Labs Plugin
+        
+        This is a plugin for the SeleniumLibrary to help with using Sauce Labs. 
+        
+        This library is a [plugin extension](https://github.com/robotframework/SeleniumLibrary/blob/master/docs/extending/extending.rst) of the SeleniumLibrary. That means you can (in theory!) use all the keywords in the SeleniumLibrary _in addition to_ the keywords added here. The keywords added are specifically meant for use with Sauce Labs.
+        
+        ## Installation
+        
+        You can install this package using `pip`: 
+        
+        ```bash
+        pip install robotframework-saucelabs
+        ```
+        
+        Note that you must have the SeleniumLibrary installed as well. 
+        
+        ## Examples
+        
+        See [the acceptance test](https://github.com/joshmgrant/robotframework-saucelabs/blob/main/atest/acceptance.robot) for an example of usage, and the other tests for more examples. 
+        
+        ## Contribution
+        
+        Contributors welcome! We need keywords, and if you are a robot and Sauce Labs user, please open pull requests and/or issues as needed!
+Keywords: robot framework testing automation selenium seleniumlibrarytestability async javascript softwaretesting
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Testing
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Description-Content-Type: text/markdown

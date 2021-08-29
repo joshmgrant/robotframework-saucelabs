@@ -5,7 +5,8 @@
 *png
 src/__pycache__/*
 src/SauceLabs/__pycache__/*
-dist/*
+dist/
+build/
 venv3/*
 venv/*
-robotframework-saucelabs/robotframework_saucelabs.egg-info/*
+*.egg-info/

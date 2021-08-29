@@ -35,7 +35,7 @@ Framework :: Robot Framework :: Library
 
 setup(
     name="robotframework-{}".format(LIBRARY_NAME.lower()),
-    version="0.1.0",
+    version="0.2.0",
     description=" A Library for Working with Sauce Labs ",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -49,5 +49,5 @@ setup(
     "testability async javascript softwaretesting",
     platforms="any",
     packages=[LIBRARY_NAME],
-    package_dir={"": "robotframework-saucelabs"},
+    package_dir={"": "src"},
 )

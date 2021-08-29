@@ -1,14 +1,8 @@
 from typing import Optional
-import os
 from SeleniumLibrary.base import LibraryComponent, keyword
-from SeleniumLibrary.keywords.element import ElementKeywords
 from SeleniumLibrary import SeleniumLibrary
-from robot.output.console.verbose import KeywordMarker
 from saucebindings.options import SauceOptions
 from saucebindings.session import SauceSession
-from selenium import webdriver
-from selenium.common.exceptions import WebDriverException
-from selenium.webdriver.remote.remote_connection import RemoteConnection
 
 from robot.utils import is_truthy
 
