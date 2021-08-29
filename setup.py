@@ -4,11 +4,15 @@ Robotframework-SauceLabs
 from pathlib import Path
 from setuptools import setup
 
-LIBRARY_NAME = "SauceLabs"
+LIBRARY_NAME = "SeleniumTestability"
 CWD = Path(__file__).parent
 
+requirements_file = CWD / "requirements.txt"
 readme_file = CWD / "README.md"
 
+# Get requirements
+with requirements_file.open(encoding="utf-8") as f:
+    REQUIREMENTS = f.read().splitlines()
 
 # Get the long description from the README file
 with readme_file.open(encoding="utf-8") as f:
@@ -31,7 +35,7 @@ Framework :: Robot Framework :: Library
 
 setup(
     name="robotframework-{}".format(LIBRARY_NAME.lower()),
-    version="0.2.1",
+    version="0.2.2",
     description=" A Library for Working with Sauce Labs ",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -39,6 +43,7 @@ setup(
     author="Josh Grant",
     author_email="joshua.m.grant@gmail.com",
     license="MIT",
+    install_requires=REQUIREMENTS,
     classifiers=CLASSIFIERS,
     keywords="robot framework testing automation selenium seleniumlibrary"
     "testability async javascript softwaretesting",
