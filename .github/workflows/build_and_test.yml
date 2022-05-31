@@ -1,0 +1,21 @@
+name: Build and Test Robotframework Sauce Labs
+
+on: 
+  push
+  pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+      - name: Install project
+        run: pip install -r requirements.txt
+      - name: Run Acceptance Tests
+        run: robot atest/
+    
