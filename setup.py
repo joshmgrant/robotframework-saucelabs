@@ -15,7 +15,7 @@ with readme_file.open(encoding="utf-8") as f:
     long_description = f.read()
 
 CLASSIFIERS = """
-Development Status :: 2 - Beta
+Development Status :: 4 - Beta
 Topic :: Software Development :: Testing
 Operating System :: OS Independent
 License :: OSI Approved :: Apache Software License
