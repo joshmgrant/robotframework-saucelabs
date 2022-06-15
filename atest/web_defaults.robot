@@ -32,3 +32,8 @@ Verify Selecting Safari Using Params
     Start Sauce Browser  browserName=safari  browserVersion=13.1  platformName=MacOS 10.15
     Browser Should Be Safari
     [Teardown]  Stop Sauce Session  ${TEST_STATUS}
+
+Verify Selecting Edge Using Params
+    Start Sauce Browser  browserName=MicrosoftEdge  browserVersion=latest  platformName=Windows 10
+    Browser Should Be Microsoft Edge
+    [Teardown]  Stop Sauce Session  ${TEST_STATUS}

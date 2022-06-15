@@ -45,6 +45,10 @@ class SauceLabs(LibraryComponent):
     def browser_should_be_safari(self):
         assert self.session.options.browser_name == "safari"
 
+    @keyword
+    def browser_should_be_microsoft_edge(self):
+        assert self.session.options.browser_name == "MicrosoftEdge"
+
 
     """Keywords"""
     @keyword
