@@ -15,7 +15,7 @@ with readme_file.open(encoding="utf-8") as f:
     long_description = f.read()
 
 CLASSIFIERS = """
-Development Status :: 3 - Alpha
+Development Status :: 2 - Beta
 Topic :: Software Development :: Testing
 Operating System :: OS Independent
 License :: OSI Approved :: Apache Software License
@@ -31,7 +31,7 @@ Framework :: Robot Framework :: Library
 
 setup(
     name="robotframework-{}".format(LIBRARY_NAME.lower()),
-    version="0.2.1",
+    version="0.2.2",
     description=" A Library for Working with Sauce Labs ",
     long_description=long_description,
     long_description_content_type="text/markdown",
